@@ -10,7 +10,7 @@ type Condition struct {
   ident string
 }
 
-func (c Condition) execute(b bool) {
+func (c Condition) Execute(b bool) {
   if ! b {
     panic(fmt.Sprintf("Condition not met for: '%s'", c.ident))
   }
