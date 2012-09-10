@@ -20,7 +20,7 @@ func main() {
   i, err := strconv.Atoi(s)
   
   if err != nil {
-    panic("usage: go contract.go <int>")
+    panic("usage: go basic_contract.go <int>")
   }
   
   fmt.Println(foo(i))
