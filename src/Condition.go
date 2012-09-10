@@ -1,6 +1,6 @@
 //C4G implements a very basic Design by Contract
 //framework. In C4G, a Contract is an implicit
-//control structure defined as one of more Conditions.
+//control structure defined as one or more Conditions.
 //The Contract is satisfied is none of its Conitions panic.
 package C4G
 
