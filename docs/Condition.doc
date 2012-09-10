@@ -1,0 +1,28 @@
+PACKAGE
+
+package C4G
+    import "D:\dev\languages\C\home\Davie\go\C4G_clone\src"
+
+    C4G implements a very basic Design by Contract framework. In C4G, a
+    Contract is an implicit control structure defined as one of more
+    Conditions. The Contract is satisfied is none of its Conitions panic.
+
+TYPES
+
+type Condition struct {
+    Ident string
+}
+    A Condition is decoupled from its Execute method, which means we may
+    declare and reuse our Condtion objects
+
+func (c Condition) Execute(b bool)
+    This method defines the Contract's expectations. The bool param must be
+    true for control to pass back to enclosing (function) scope
+
+type Conditional interface {
+    // contains filtered or unexported methods
+}
+    A Conditional takes a bool and panics if that bool is false, hence the
+    contract is broken
+
+
