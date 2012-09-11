@@ -1,7 +1,7 @@
 //C4G implements a very basic Design by Contract
 //framework. In C4G, a Contract is an implicit
 //control structure defined as one or more Conditions.
-//The Contract is satisfied is none of its Conitions panic.
+//The Contract is satisfied if none of its Conitions panic.
 package C4G
 
 import "fmt"
@@ -9,7 +9,7 @@ import "fmt"
 //A Conditional takes a bool and panics if
 //that bool is false, hence the contract is broken
 type Conditional interface {
-	execute(b bool)
+	Execute(b bool)
 }
 
 //A Condition is decoupled from its
